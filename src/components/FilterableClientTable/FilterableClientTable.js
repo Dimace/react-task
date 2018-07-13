@@ -26,10 +26,11 @@ class FilterableClientTable extends React.Component {
           let str='';
           for(let key in client) {
             for(let key2 in client[key]) {
-                str += client[key][key2]+' ';
+                if(String(client[key][key2]).toLowerCase().includes(value) && key2 !== "avatar")
+                    return true;
             }
           }
-          return str.toLowerCase().includes(value);
+          return false;
         });
 
         this.setState({

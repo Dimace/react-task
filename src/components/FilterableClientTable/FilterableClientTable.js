@@ -22,8 +22,8 @@ class FilterableClientTable extends React.Component {
 
     onSearchTextChange(e) {
         let value = e.target.value.toLowerCase();
+        let originalValue = e.target.value;
         this.filteredClients = this.props.clients.filter(client => {
-          let str='';
           for(let key in client) {
             for(let key2 in client[key]) {
                 if(String(client[key][key2]).toLowerCase().includes(value) && key2 !== "avatar")
@@ -34,7 +34,7 @@ class FilterableClientTable extends React.Component {
         });
 
         this.setState({
-          filterText: value,
+          filterText: originalValue,
         });
     }
 

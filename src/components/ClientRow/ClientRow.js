@@ -7,7 +7,7 @@ export default class ClientRow extends React.Component {
 
       return (
         <Item onClick={() => onSelectClient(client)}>
-          <Image size='mini' src={client.general.avatar} />
+          <Image size='tiny' circular src={client.general.avatar} />
           <Item.Content>
             <Item.Header classname='header' as='a'>{client.general.firstName+' '+client.general.lastName}</Item.Header>
             <Item.Description>

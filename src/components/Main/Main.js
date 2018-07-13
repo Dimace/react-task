@@ -8,16 +8,18 @@ class MainComponent extends React.Component {
   render() {
     const { currentClient } = this.props;
     return (
-      <Grid.Column width={10}>
-        <div>
-        { this.props.currentClient == null ?
-            <h1>Please select client</h1> 
-            :
-            <div>
-              <ClientDetails client={currentClient} />
-            </div>
-        }
-        </div>
+      <Grid.Column width={10} stretched>
+        <Segment>
+          <div>
+          {   currentClient == null ?
+              <h1>Please select client</h1> 
+              :
+              <div>
+                <ClientDetails client={currentClient} />
+              </div>
+          }
+          </div>
+        </Segment>
       </Grid.Column>
     );
   }

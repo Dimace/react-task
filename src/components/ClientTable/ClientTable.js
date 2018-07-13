@@ -14,7 +14,7 @@ export default class ClientTable extends React.Component {
         }); 
     
         return (
-            <Segment>
+            <Segment color='blue'>
                 <Item.Group link>
                     {rows }
                 </Item.Group>

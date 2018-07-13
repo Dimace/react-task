@@ -7,7 +7,7 @@ import { Grid } from 'semantic-ui-react';
 class App extends Component {
   render() {
     return (
-      <Grid divided='vertically'>
+      <Grid divided='vertically' centered>
         <FilterableClientTable />
         <Main />
       </Grid>

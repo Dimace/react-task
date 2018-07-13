@@ -13,13 +13,13 @@ export default class ClientDetails extends React.Component {
             <Item.Description>
               <h3>{client.job.title+' - '+client.job.company}</h3>
               <Divider horizontal>contact</Divider>
-              <p>email: <b>Gerry_Hackett77@gmail.com</b></p>
-              <p>phone: <b>(895) 984-0132</b></p>
+              <p>email: <b>{client.contact.email}</b></p>
+              <p>phone: <b>{client.contact.phone}</b></p>
               <Divider horizontal>address</Divider>
-              <p>street: <b>1520 Zemlak Cove</b></p>
-              <p>city: <b>New Devonm</b></p>
-              <p>zipCode: <b>42586-7898</b></p>
-              <p>country: <b>Guinea-Bissau</b></p>
+              <p>street: <b>{client.address.street}</b></p>
+              <p>city: <b>{client.address.city}</b></p>
+              <p>zipCode: <b>{client.address.zipCode}</b></p>
+              <p>country: <b>{client.address.country}</b></p>
             </Item.Description>
           </Item.Content>
         </Item>

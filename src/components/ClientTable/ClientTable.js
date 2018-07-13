@@ -1,5 +1,6 @@
 import React from 'react';
 import ClientRow from '../ClientRow/ClientRow.js';
+import { List, Segment, Item } from 'semantic-ui-react';
 
 export default class ClientTable extends React.Component {
     render() {
@@ -13,9 +14,11 @@ export default class ClientTable extends React.Component {
         }); 
     
         return (
-            <div>
-                {rows }
-            </div>
+            <Segment>
+                <Item.Group link>
+                    {rows }
+                </Item.Group>
+            </Segment>
         );
     }
   }

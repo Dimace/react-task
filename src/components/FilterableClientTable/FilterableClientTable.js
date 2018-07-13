@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar.js';
 import './FilterableClientTable.css';
 import { connect } from 'react-redux';
 import { selectClient } from '../../actions/actions.js';
+import { Grid, Rail, Segment } from 'semantic-ui-react';
 
 class FilterableClientTable extends React.Component {
     constructor(props) {
@@ -39,16 +40,18 @@ class FilterableClientTable extends React.Component {
 
     render() {
         return (
-        <div>
-            <SearchBar
-                filterText = {this.state.filterText}
-                onSearchTextChange = {this.onSearchTextChange}
-            />
-            <ClientTable
-                clients = {this.filteredClients}
-                onSelectClient = {this.onSelectClient}
-            />
-        </div>
+        <Grid.Column width={5}>
+            <Segment>
+                <SearchBar
+                    filterText = {this.state.filterText}
+                    onSearchTextChange = {this.onSearchTextChange}
+                />
+                <ClientTable
+                    clients = {this.filteredClients}
+                    onSelectClient = {this.onSelectClient}
+                />
+            </Segment>
+        </Grid.Column>
         );
     }
 }

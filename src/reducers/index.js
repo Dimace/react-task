@@ -2,7 +2,6 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', '/clients.json', false);
 xhr.send();
 const clients = JSON.parse(xhr.responseText);
-console.log(clients);
 
 let initialState = {
   clients,

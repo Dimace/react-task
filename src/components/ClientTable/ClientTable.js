@@ -1,6 +1,6 @@
 import React from 'react';
 import ClientRow from '../ClientRow/ClientRow.js';
-import { List, Segment, Item } from 'semantic-ui-react';
+import { Segment, Item } from 'semantic-ui-react';
 
 export default class ClientTable extends React.Component {
     render() {

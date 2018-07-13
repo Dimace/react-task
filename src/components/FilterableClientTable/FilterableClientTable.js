@@ -1,10 +1,9 @@
 import React from 'react';
 import ClientTable from '../ClientTable/ClientTable.js';
 import SearchBar from '../SearchBar/SearchBar.js';
-import './FilterableClientTable.css';
 import { connect } from 'react-redux';
 import { selectClient } from '../../actions/actions.js';
-import { Grid, Rail, Segment } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 
 class FilterableClientTable extends React.Component {
     constructor(props) {
@@ -41,7 +40,7 @@ class FilterableClientTable extends React.Component {
     render() {
         return (
         <Grid.Column width={5}>
-            <Segment>
+            <Segment raised>
                 <SearchBar
                     filterText = {this.state.filterText}
                     onSearchTextChange = {this.onSearchTextChange}

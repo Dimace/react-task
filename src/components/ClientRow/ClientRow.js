@@ -2,10 +2,10 @@ import React from 'react';
 
 export default class ClientRow extends React.Component {
     render() {
-      const client = this.props.client;
+      const { client, onSelectClient }  = this.props;
 
       return (
-        <div>
+        <div onClick={() => onSelectClient(client)}>
           {client.general.firstName}
         </div>
       );

@@ -13,8 +13,13 @@ class FilterableClientTable extends React.Component {
         };
         this.filteredClients = props.clients;
         this.onSearchTextChange = this.onSearchTextChange.bind(this);
+        this.onSelectClient = this.onSelectClient.bind(this);
     }
     
+    onSelectClient(client) {
+        this.props.onSelectClient(client);
+    }
+
     onSearchTextChange(e) {
         let value = e.target.value.toLowerCase();
         this.filteredClients = this.props.clients.filter(client => {
@@ -41,6 +46,7 @@ class FilterableClientTable extends React.Component {
             />
             <ClientTable
                 clients = {this.filteredClients}
+                onSelectClient = {this.onSelectClient}
             />
         </div>
         );

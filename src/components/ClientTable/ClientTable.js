@@ -4,10 +4,9 @@ import ClientRow from '../ClientRow/ClientRow.js';
 export default class ClientTable extends React.Component {
     render() {
         const rows = [];
-        console.log('this.props: '+this.props.clients)
-        console.log('clients[0]'+this.props.clients[0].general.firstName);
         this.props.clients.forEach((client) => {
             rows.push(<ClientRow
+                onSelectClient={this.props.onSelectClient}
                 client={client}
                 key={client.general.firstName}
             />);
@@ -15,7 +14,7 @@ export default class ClientTable extends React.Component {
     
         return (
             <div>
-                {rows}
+                {rows }
             </div>
         );
     }
